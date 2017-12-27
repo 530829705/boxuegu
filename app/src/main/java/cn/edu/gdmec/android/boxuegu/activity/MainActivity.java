@@ -18,14 +18,17 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import cn.edu.gdmec.android.boxuegu.R;
+import cn.edu.gdmec.android.boxuegu.view.CourseView;
 import cn.edu.gdmec.android.boxuegu.view.ExercisesView;
+import cn.edu.gdmec.android.boxuegu.view.MyInfoView;
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     /**
      * 视图
      */
-    //private CourseView mCourseView;
+    private CourseView mCourseView;
     private ExercisesView mExercisesView;
-    //private MyInfoView mMyInfoView;
+    private MyInfoView mMyInfoView;
     /**
      * 中间内容栏
      */
@@ -199,13 +202,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch (viewIndex) {
             case 0:
                 //课程界面
-                //if(mCourseView == null){
-                // mCourseView = new CourseView(this);
-                // mBodyLayout.addView(mCourseView.getView());
-                // }else{
-                //     mCourseView.getView();
-                //  }
-                //  mCourseView.showView();
+                if(mCourseView == null){
+                 mCourseView = new CourseView(this);
+                 mBodyLayout.addView(mCourseView.getView());
+                 }else{
+                     mCourseView.getView();
+                  }
+                  mCourseView.showView();
                 break;
             case 1:
                 //习题界面
@@ -219,13 +222,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case 2:
                 //我的界面
-                //  if(mMyInfoView == null){
-                //     mMyINfoView = new MyInfoView(this);
-                //     mBodyLayout.addView(mMyInfoView.getView());
-                //     }else{
-                //           mMyInfoView.getView();
-                //     }
-                //      mMyInfoView.showView();
+                  if(mMyInfoView == null){
+                     mMyInfoView = new MyInfoView(this);
+                     mBodyLayout.addView(mMyInfoView.getView());
+                     }else{
+                           mMyInfoView.getView();
+                     }
+                      mMyInfoView.showView();
                 break;
         }
     }
@@ -239,9 +242,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 clearBottomImageState();
                 selectDisplayView(0);
             }
-            //    if(mMyInfoView != null){//登录成功或退出登录时根据isLogin设置我的界面
-            //       mMyInfoView.setLoginParams(isLogin);
-            //    }
+                if(mMyInfoView != null){//登录成功或退出登录时根据isLogin设置我的界面
+                  mMyInfoView.setLoginParams(isLogin);
+                }
         }
     }
     protected long exitTime;//记录第一次点击时的时间
