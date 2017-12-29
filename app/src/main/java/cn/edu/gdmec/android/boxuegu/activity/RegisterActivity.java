@@ -100,7 +100,7 @@ public class RegisterActivity extends AppCompatActivity {
     /*
     从sp中读取输入到用户名，判断sp是否有此用户名
      */
-    private boolean isExistUserName(){
+    private boolean isExistUserName(String userName){
         boolean has_userName = false;
         SharedPreferences sp = getSharedPreferences("loginInfo",MODE_PRIVATE);
         String spPsw = sp.getString(userName,"");
