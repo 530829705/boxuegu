@@ -51,7 +51,7 @@ public class AdBannerAdapter extends FragmentStatePagerAdapter implements
     /**
      * 返回数据集的真实容量大小
      */
-    public int getSieze(){
+    public int getSize(){
         return cadl == null ? 0 : cadl.size();
     }
     @Override
