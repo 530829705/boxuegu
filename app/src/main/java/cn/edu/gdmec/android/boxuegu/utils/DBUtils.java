@@ -58,7 +58,7 @@ public class DBUtils {
     /**
      * 修改个人资料
      */
-    public void updateUserInfo(String key,String value,String userName){
+    public void updataUserInfo(String key,String value,String userName){
         ContentValues cv = new ContentValues();
         cv.put(key,value);
         db.update(SQLiteHelper.U_USERINFO,cv, "userName=?",
@@ -117,7 +117,7 @@ public class DBUtils {
     /**
      * 获取视频记录信息
      */
-    public List<VideoBean>getVideoHistroy(String userName){
+    public List<VideoBean>getVideoHistory(String userName){
         String sql = "SELECT * FROM"+ SQLiteHelper.U_VIDEO_PLAY_LIST+"WHERE userName=?";
         Cursor cursor = db.rawQuery(sql,new String[]{userName});
         List<VideoBean>vbl=new ArrayList<>();

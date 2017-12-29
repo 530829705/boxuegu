@@ -143,7 +143,7 @@ public class VideoListActivity extends AppCompatActivity implements View.OnClick
                 bean.videoId=Integer.parseInt(jsonObj
                         .getString("videoId"));
                 bean.title=jsonObj.getString("title");
-                bean.secondTitle=jsonObj.getString("secondTitle")
+                bean.secondTitle=jsonObj.getString("secondTitle");
                 bean.videoPath=jsonObj.getString("videoPath");
                 videoList.add(bean);
             }

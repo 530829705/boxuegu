@@ -142,7 +142,7 @@ public class CourseView {
      */
     public static int getScreenWidth(Activity context){
         DisplayMetrics metrics = new DisplayMetrics();
-        Display display = context.getWindowManager().getDufaultDisplay();
+        Display display = context.getWindowManager().getDefaultDisplay();
         display.getMetrics(metrics);
         return metrics.widthPixels;
     }

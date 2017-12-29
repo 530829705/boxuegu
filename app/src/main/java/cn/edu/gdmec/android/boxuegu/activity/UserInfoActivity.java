@@ -134,7 +134,7 @@ public class UserInfoActivity extends AppCompatActivity implements View.OnClickL
     /*
     设置性别的弹出框
      */
-    private void setDialog(String sex){
+    private void sexDialog(String sex){
         int setFlag = 0;
         if ("男".equals(sex)){
             setFlag = 0;

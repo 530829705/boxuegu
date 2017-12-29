@@ -20,19 +20,18 @@ import cn.edu.gdmec.android.boxuegu.utils.MD5Utils;
 /**
  * Created by student on 17/12/27.
  */
-
 public class RegisterActivity extends AppCompatActivity {
     private TextView tv_main_title;
     private TextView tv_back;
     private Button btn_register;
+    private EditText et_user_name, et_psw, et_psw_again;
     private String userName,psw,pswAgain;
-    private EditText et_user_name,et_psw,et_psw_again;
     private RelativeLayout rl_title_bar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_register);
         //设置此界面为竖屏
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         init();
@@ -56,7 +55,6 @@ public class RegisterActivity extends AppCompatActivity {
                 RegisterActivity.this.finish();
             }
         });
-        //注册按钮的点击事件
         btn_register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -84,7 +82,6 @@ public class RegisterActivity extends AppCompatActivity {
                     data.putExtra("userName",userName);
                     setResult(RESULT_OK,data);
                     RegisterActivity.this.finish();
-                    return;
                 }
             }
         });
@@ -115,7 +112,7 @@ public class RegisterActivity extends AppCompatActivity {
         //logininfo表示文件名
         SharedPreferences sp = getSharedPreferences("loginInfo",MODE_PRIVATE);
         SharedPreferences.Editor editor = sp.edit();//获取编辑
-        editor.putString(userName,psw);
+        editor.putString(userName,md5Psw);
         editor.commit();//提交修改
     }
 
