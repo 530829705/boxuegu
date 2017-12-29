@@ -18,7 +18,7 @@ import cn.edu.gdmec.android.boxuegu.fragment.AdBannerFragment;
 import cn.edu.gdmec.android.boxuegu.view.CourseView;
 
 public class AdBannerAdapter extends FragmentStatePagerAdapter implements
-        OnTouchListener {
+        View.OnTouchListener {
     private Handler mHandler;
     private List<CourseBean> cadl;
     public AdBannerAdapter(FragmentManager fm){
