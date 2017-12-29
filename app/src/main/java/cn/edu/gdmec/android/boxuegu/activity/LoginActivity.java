@@ -116,7 +116,20 @@ public class LoginActivity extends AppCompatActivity {
         SharedPreferences.Editor editor = sp.edit();//获取编辑器
         editor.putBoolean("isLogin",status);//存入boolean类型的登录状态
         editor.putString("loginUserName",userName);//存入登录状态时的用户名
-        editor.commit();
+        editor.commit();//提交修改
     }
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (data != null){
+            //从注册界面传递过来的用户名
+            String userName = data.getStringExtra("userName");
+            if (!TextUtils.isEmpty(userName)){
+                et_user_name.setText(userName);
+                //设置光标的位置
+                et_user_name.setSelection(userName.length());
+            }
+        }
+    }
 }

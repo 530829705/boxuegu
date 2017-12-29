@@ -3,8 +3,8 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/login_bg"
-    android:layout="@layout/main_title_bar">
+    android:background="@drawable/login_bg">
+    <include layout="@layout/main_title_bar"/>
     <ImageView
         android:id="@+id/iv_head"
         android:layout_width="70dp"
