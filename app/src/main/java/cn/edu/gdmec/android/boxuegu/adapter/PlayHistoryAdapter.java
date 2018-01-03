@@ -114,7 +114,7 @@ public class PlayHistoryAdapter extends BaseAdapter{
                 if(bean == null) return;
                 //跳转到播放视频界面
                 Intent intent=new Intent(mContext,VideoPlayActivity.class);
-                intent.putExtra("videoPath",bean.videoId);
+                intent.putExtra("videoPath",bean.videoPath);
                 mContext.startActivity(intent);
             }
         });

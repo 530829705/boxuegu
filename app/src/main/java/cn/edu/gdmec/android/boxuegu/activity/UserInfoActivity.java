@@ -58,6 +58,7 @@ public class UserInfoActivity extends AppCompatActivity implements View.OnClickL
         tv_nickName = (TextView) findViewById(R.id.tv_nickName);
         tv_sex = (TextView) findViewById(R.id.tv_sex);
         tv_signature = (TextView) findViewById(R.id.tv_signature);
+        tv_user_name = (TextView) findViewById(R.id.tv_user_name);
     }
     /*
     获取数据
@@ -160,7 +161,7 @@ public class UserInfoActivity extends AppCompatActivity implements View.OnClickL
     private void setSex(String sex){
         tv_sex.setText(sex);
         //更新数据库中的性别字段
-        DBUtils.getInstance(UserInfoActivity.this).updataUserInfo("sex",
+        DBUtils.getInstance(UserInfoActivity.this).updateUserInfo("sex",
                 sex,spUserName);
     }
     /*
@@ -180,7 +181,7 @@ public class UserInfoActivity extends AppCompatActivity implements View.OnClickL
                     }
                     tv_nickName.setText(new_info);
                     //更新数据库中的呢称字段
-                    DBUtils.getInstance(UserInfoActivity.this).updataUserInfo("nickName",
+                    DBUtils.getInstance(UserInfoActivity.this).updateUserInfo("nickName",
                             new_info, spUserName);
                 }
                 break;
@@ -192,7 +193,7 @@ public class UserInfoActivity extends AppCompatActivity implements View.OnClickL
                     }
                     tv_signature.setText(new_info);
                     //更新数据库中的签名字段
-                    DBUtils.getInstance(UserInfoActivity.this).updataUserInfo("signature",
+                    DBUtils.getInstance(UserInfoActivity.this).updateUserInfo("signature",
                             new_info, spUserName);
                     break;
 

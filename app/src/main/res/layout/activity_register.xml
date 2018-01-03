@@ -72,7 +72,7 @@
         android:layout_marginRight="35dp"
         android:layout_gravity="center_horizontal"
         android:background="@drawable/register_selector"
-        android:text="注  册"
+        android:text="注 册"
         android:textColor="@android:color/white"
         android:textSize="18sp"/>
 

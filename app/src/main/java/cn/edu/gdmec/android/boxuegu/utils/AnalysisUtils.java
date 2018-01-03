@@ -132,7 +132,7 @@ public class AnalysisUtils {
     从sharedpreferences中读取登录用户名
      */
     public static String readLoginUserName(Context context){
-        SharedPreferences sp = context.getSharedPreferences("logininfo",Context.MODE_PRIVATE);
+        SharedPreferences sp = context.getSharedPreferences("loginInfo",Context.MODE_PRIVATE);
         String userName = sp.getString("loginUserName","");
         return userName;
     }

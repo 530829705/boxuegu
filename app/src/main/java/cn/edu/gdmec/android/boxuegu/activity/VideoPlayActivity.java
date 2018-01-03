@@ -50,8 +50,7 @@ public class VideoPlayActivity extends AppCompatActivity{
     private void play(){
         if (TextUtils.isEmpty(videoPath)){
             Toast.makeText(this,"本视频没有此视频，暂无法播放",Toast.LENGTH_SHORT).show();
-            return
-                    ;
+            return;
         }
         //Videoview无法直接读取assets中的文件，可以访问res中的文件，以资源id方式引用文件
         //所以需要通过文件名称获取资源id的方法，资源文件名称不能有后缀名。
