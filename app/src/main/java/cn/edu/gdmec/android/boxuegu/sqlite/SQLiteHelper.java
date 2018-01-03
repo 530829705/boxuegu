@@ -23,7 +23,7 @@ public class SQLiteHelper extends SQLiteOpenHelper{
                 +"signature VARCHAR"//签名
                 +")");
         //创建视频播放记录表
-        db.execSQL("CREATE TABLE IF NOT EXISTS"+U_VIDEO_PLAY_LIST+"("
+        db.execSQL("CREATE TABLE IF NOT EXISTS "+U_VIDEO_PLAY_LIST+"("
                 + "_id INTEGER PRIMARY KEY AUTOINCREMENT,"
                 +" userName VARCHAR,"//用户名
                 + "chapterId INT,"//章节ID号
